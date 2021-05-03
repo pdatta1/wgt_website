@@ -1,0 +1,37 @@
+# Most of these __str__ methods use the string class format method
+# For more information on using this format method,
+# refer to the Python String Formatting item in Blackboard
+# under the Course Resources -> Python and Django Documentation
+
+#class GolfCourse
+    def __str__(self):
+        return self.course_name
+
+#class Hole
+    def __str__(self):
+        return "{}, Hole {}, Par {}".format (self.hole_course.course_name,
+                                             self.hole_number, self.hole_par)
+
+#class Tournament
+    def __str__(self):
+        return self.tourn_name
+
+#class Round
+    def __str__(self):
+        return ("{}".format (self.round_day))
+
+#class Golfer
+    def __str__(self):
+        return self.golfer_name
+
+#class TournGolfer
+    def __str__(self):
+        return "{} {}".format (self.tg_tourn.tourn_name,
+                               self.tg_golfer.golfer_name)
+
+#class GolferRoundScores
+    def __str__(self):
+        return "{} {} {} {}".format (self.grs_tourn_golfer.tg_golfer,
+                                     self.grs_tourn_golfer.tg_tourn,
+                                     self.grs_round, self.grs_total_score)
+
